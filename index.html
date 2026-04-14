@@ -10,6 +10,14 @@
       border: 1px solid #e5e7eb; 
       border-radius: 8px; 
     }
+    /* 添加这段 - 让文本自动换行 */
+    #sdk-container pre,
+    #sdk-container code,
+    #sdk-container .plaintext {
+      white-space: pre-wrap !important;
+      word-wrap: break-word !important;
+      word-break: break-all !important;
+    }
   </style>
 </head>
 <body>
@@ -20,7 +28,7 @@
   <script>
     cozeWebSDK.init({
       projectId: '7628158220036472886',
-      refreshToken: () =>'pat_MDtDIsJRvvmvP97ZIybdcPx5qAOo1XTECG59iEpmi2ORGLl4oZgLUOOBkrKUSQzw',  // ← 替换成你的 Token
+      refreshToken: () => 'pat_MDtDIsJRvvmvP97ZIybdcPx5qAOo1XTECG59iEpmi2ORGLl4oZgLUOOBkrKUSQzw',
       container: document.getElementById('sdk-container'),
     });
   </script>
